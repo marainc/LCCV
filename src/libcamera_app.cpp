@@ -101,10 +101,10 @@ void LibcameraApp::ConfigureStill(unsigned int flags)
 //    configuration_->transform = options_->transform;
 
 	//if (have_raw_stream && !options_->rawfull)
-	{
+	// {
 		configuration_->at(1).size.width = configuration_->at(0).size.width;
 		configuration_->at(1).size.height = configuration_->at(0).size.height;
-	}
+	// }
 	configuration_->at(1).bufferCount = configuration_->at(0).bufferCount;
 
 	configureDenoise(options_->denoise == "auto" ? "cdn_hq" : options_->denoise);
